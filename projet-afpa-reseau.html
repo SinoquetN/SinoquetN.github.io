@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sécurisation du réseau FRC | Noé Sinoquet</title>
+<meta name="description" content="Étude de faisabilité et maquette de sécurisation du réseau de production du site FRC : segmentation, filtrage, centralisation DHCP/DNS et continuité d&#x27;activité.">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+<div class="wrap">
+<a class="brand" href="index.html">Noé Sinoquet</a>
+<nav aria-label="Navigation principale">
+<ul>
+<li><a href="index.html">Accueil</a></li>
+<li><a href="projets.html" aria-current="page">Projets</a></li>
+<li><a href="competences.html">Compétences</a></li>
+<li><a href="veille.html">Veille</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main id="contenu">
+<div class="wrap">
+<p class="crumbs"><a href="projets.html">← Tous les projets</a></p>
+<h1>Sécurisation du réseau FRC</h1>
+<p class="lead">Étude de faisabilité et maquette de sécurisation du réseau de production du site FRC : segmentation, filtrage, centralisation DHCP/DNS et continuité d&#x27;activité.</p>
+<dl class="facts"><div><dt>Cadre</dt><dd>Stage de 350 h, AFPA Amiens (FRC)</dd></div><div><dt>Période</dt><dd>11/05/2026 – 24/07/2026</dd></div><div><dt>Matériel</dt><dd>Routeur Cisco, switch Catalyst, serveur Linux</dd></div><div><dt>Méthodes</dt><dd>ISO 22301, EBIOS RM</dd></div></dl>
+
+<section><h2>Objectifs</h2><ul class="clean"><li>Évaluer la faisabilité d'une segmentation du réseau de production.</li><li>Réduire la surface d'attaque en limitant les flux entre les zones.</li><li>Formaliser un plan de continuité d'activité.</li></ul></section><section><h2>Réalisations</h2><ul class="clean"><li>Conception d'un plan d'adressage et d'une segmentation en 8 VLAN (formateurs, développement, exploitation, invités, laboratoires isolés, serveurs, imprimantes, administration).</li><li>Rédaction de la matrice des flux inter-VLAN et correction des permissions asymétriques : les imprimantes avaient des droits sortants injustifiés et les invités avaient accès aux formateurs.</li><li>Déploiement d'ACL sur un routeur Cisco 1721 (IOS 12.2, sans numéros de séquence), avec revue de sécurité et correction d'un <code>permit ip any any</code> critique sur l'ACL externe.</li><li>Centralisation du DHCP et du DNS avec dnsmasq sur Ubuntu, relais DHCP par <code>ip helper-address</code>, diagnostic d'un blocage du port 53 avec tcpdump.</li><li>Remise à zéro et reconfiguration complète d'un switch Catalyst 3560.</li><li>Plan de continuité d'activité aligné sur ISO 22301 et analyse de risques avec la méthode EBIOS RM.</li><li>Supervision de sécurité avec Wazuh.</li></ul></section><section><h2>Compétences mises en œuvre</h2><div class="tags"><span class="tag">Cisco IOS</span><span class="tag">VLAN</span><span class="tag">ACL</span><span class="tag">dnsmasq</span><span class="tag">DHCP</span><span class="tag">DNS</span><span class="tag">ISO 22301</span><span class="tag">EBIOS RM</span><span class="tag">Wazuh</span></div></section>
+<section></section>
+<div class="pager"><a href="projet-afpa-ad.html">← Réseau Active Directory de laboratoire</a><a href="projet-labs-studi.html">Laboratoires de formation →</a></div>
+</div>
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<span>© 2026 Noé Sinoquet</span>
+<span><a href="mailto:sinoquetnoe01@gmail.com">sinoquetnoe01@gmail.com</a> · <a href="tel:+33637860741">06 37 86 07 41</a></span>
+</div>
+</footer>
+</body>
+</html>

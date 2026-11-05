@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laboratoires de formation | Noé Sinoquet</title>
+<meta name="description" content="Trois laboratoires réalisés pendant le Bachelor : interconnexion de sites avec pfSense, durcissement DNS/DHCP sous Windows Server 2022 et virtualisation avec Proxmox VE.">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+<div class="wrap">
+<a class="brand" href="index.html">Noé Sinoquet</a>
+<nav aria-label="Navigation principale">
+<ul>
+<li><a href="index.html">Accueil</a></li>
+<li><a href="projets.html" aria-current="page">Projets</a></li>
+<li><a href="competences.html">Compétences</a></li>
+<li><a href="veille.html">Veille</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main id="contenu">
+<div class="wrap">
+<p class="crumbs"><a href="projets.html">← Tous les projets</a></p>
+<h1>Laboratoires de formation</h1>
+<p class="lead">Trois laboratoires réalisés pendant le Bachelor : interconnexion de sites avec pfSense, durcissement DNS/DHCP sous Windows Server 2022 et virtualisation avec Proxmox VE.</p>
+<dl class="facts"><div><dt>Cadre</dt><dd>Bachelor AIS, Studi</dd></div><div><dt>Période</dt><dd>2025 – 2026</dd></div><div><dt>Titre visé</dt><dd>RNCP 37680</dd></div><div><dt>Outils</dt><dd>pfSense, Windows Server, Proxmox</dd></div></dl>
+
+<section><h2>VPN IPsec site à site avec pfSense</h2><ul class="clean"><li>Routage et NAT entre segments LAN reliés par un lien WAN.</li><li>Mise en place d'une DMZ.</li><li>Dépannage d'un tunnel IPsec : sélecteurs de trafic de la phase 2 mal configurés.</li><li>Configuration de VLAN sur un switch manageable Netgear GS724T, avec récupération après un verrouillage de l'administration.</li><li>Contrôle d'accès RDP.</li></ul></section><section><h2>DNS et DHCP sécurisés sous Windows Server 2022</h2><ul class="clean"><li>Autorisation du serveur DHCP dans Active Directory.</li><li>Filtrage par adresse MAC (listes d'autorisation et de refus), validé par une preuve de concept avec des adresses APIPA.</li><li>Signature de zone DNSSEC avec déploiement par GPO.</li><li>Listes de blocage DNS et limitation de débit des réponses (RRL).</li><li>Rapport de laboratoire formel rédigé pour le jury.</li></ul></section><section><h2>Proxmox VE et Nextcloud</h2><ul class="clean"><li>Installation de Proxmox VE imbriqué dans VirtualBox (la virtualisation KVM imbriquée n'était pas disponible).</li><li>Durcissement de la sécurité et déploiement de machines virtuelles Debian.</li><li>Réseau interne totalement isolé, en vue d'un projet de service Nextcloud.</li></ul></section><section><h2>Scripts Bash</h2><ul class="clean"><li>Création et suppression de comptes à partir d'un fichier CSV, avec suppression des accents par <code>iconv</code>.</li><li>Mot de passe défini par <code>chpasswd</code> et changement forcé à la première connexion avec <code>chage -d 0</code>.</li><li>Planification avec cron et journalisation dans <code>/var/log</code>.</li></ul></section>
+<section></section>
+<div class="pager"><a href="projet-afpa-reseau.html">← Sécurisation du réseau FRC</a><a href="projet-evolinfra.html">EvolInfra →</a></div>
+</div>
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<span>© 2026 Noé Sinoquet</span>
+<span><a href="mailto:sinoquetnoe01@gmail.com">sinoquetnoe01@gmail.com</a> · <a href="tel:+33637860741">06 37 86 07 41</a></span>
+</div>
+</footer>
+</body>
+</html>

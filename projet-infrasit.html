@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>InfraSit | Noé Sinoquet</title>
+<meta name="description" content="Infrastructure informatique du site de TiersLieux86 à Chasseneuil : plan d&#x27;adressage, maquette Packet Tracer et prototype virtuel avec Active Directory.">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+<div class="wrap">
+<a class="brand" href="index.html">Noé Sinoquet</a>
+<nav aria-label="Navigation principale">
+<ul>
+<li><a href="index.html">Accueil</a></li>
+<li><a href="projets.html" aria-current="page">Projets</a></li>
+<li><a href="competences.html">Compétences</a></li>
+<li><a href="veille.html">Veille</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main id="contenu">
+<div class="wrap">
+<p class="crumbs"><a href="projets.html">← Tous les projets</a></p>
+<h1>InfraSit</h1>
+<p class="lead">Infrastructure informatique du site de TiersLieux86 à Chasseneuil : plan d&#x27;adressage, maquette Packet Tracer et prototype virtuel avec Active Directory.</p>
+<dl class="facts"><div><dt>Cadre</dt><dd>BTS SIO option SISR</dd></div><div><dt>Période</dt><dd>01/2025</dd></div><div><dt>Outils</dt><dd>Packet Tracer, VirtualBox</dd></div><div><dt>Systèmes</dt><dd>VyOS, Windows Server 2019, Windows 10</dd></div></dl>
+<p class="note">Mise en situation professionnelle réalisée dans le cadre du BTS SIO (CNED). Les entreprises et les sites décrits sont des cas d'étude.</p>
+<section><h2>Objectifs</h2><ul class="clean"><li>Assurer une connectivité fiable aux entreprises hébergées et aux espaces communs.</li><li>Gérer les utilisateurs et les ressources avec un Active Directory.</li></ul></section><section><h2>Plan d'adressage</h2><div class="table-wrap"><table><thead><tr><th>Réseau</th><th>Plage</th></tr></thead><tbody><tr><td>Bureaux des adhérents</td><td>192.168.2.0/24</td></tr><tr><td>Junior entreprise</td><td>172.17.12.0/24</td></tr><tr><td>DMZ</td><td>172.16.2.0/24</td></tr><tr><td>Serveurs internes</td><td>10.2.0.0/24</td></tr><tr><td>Wi-Fi visiteurs</td><td>192.168.200.0/24</td></tr></tbody></table></div></section><section><h2>Réalisations</h2><ul class="clean"><li><strong>Maquette Packet Tracer :</strong> routeur, commutateurs de distribution et d'accès, Wi-Fi avec segmentation, VLAN.</li><li><strong>Prototype virtuel sous VirtualBox :</strong> routeur VyOS, contrôleur de domaine Windows Server 2019 et poste client Windows 10.</li><li><strong>Services :</strong> DHCP sur le serveur Windows et relais DHCP sur VyOS pour plusieurs sous-réseaux.</li><li><strong>Active Directory :</strong> création du domaine, des unités d'organisation (Administration, Adhérents, Junior Entreprise), des utilisateurs et des groupes.</li><li><strong>Partages :</strong> dossier partagé avec droits en lecture ou écriture selon le rôle (employé ou responsable).</li></ul></section><section><h2>Tests réalisés</h2><ul class="clean"><li>Connectivité entre réseaux par ping et tests de routage.</li><li>Fonctionnement du DHCP sur tous les sous-réseaux.</li><li>Intégration des utilisateurs à l'Active Directory et vérification de leurs permissions.</li><li>Accès aux dossiers partagés avec différents profils.</li></ul></section><section><h2>Pistes d'amélioration</h2><p>Ajouter un pare-feu et un VPN, et automatiser les tâches d'administration.</p></section>
+<section><h2>Documents</h2><ul class="clean"><li><a href="https://drive.google.com/file/d/1HN2LWigTl9cnLMbD90OVKRzMcopQ4DXx/view" rel="noopener" target="_blank">Documentation technique</a></li></ul></section>
+<div class="pager"><a href="projet-evolsyswin.html">← EvolSysWin</a><a href="projet-clonix.html">Clonix →</a></div>
+</div>
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<span>© 2026 Noé Sinoquet</span>
+<span><a href="mailto:sinoquetnoe01@gmail.com">sinoquetnoe01@gmail.com</a> · <a href="tel:+33637860741">06 37 86 07 41</a></span>
+</div>
+</footer>
+</body>
+</html>

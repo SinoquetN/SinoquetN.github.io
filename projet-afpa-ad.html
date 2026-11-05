@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Réseau Active Directory de laboratoire | Noé Sinoquet</title>
+<meta name="description" content="Déploiement, depuis zéro, d&#x27;un réseau Active Directory de laboratoire destiné aux examens des stagiaires TSSR, avec une exigence de reprise par l&#x27;équipe après mon départ.">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+<div class="wrap">
+<a class="brand" href="index.html">Noé Sinoquet</a>
+<nav aria-label="Navigation principale">
+<ul>
+<li><a href="index.html">Accueil</a></li>
+<li><a href="projets.html" aria-current="page">Projets</a></li>
+<li><a href="competences.html">Compétences</a></li>
+<li><a href="veille.html">Veille</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main id="contenu">
+<div class="wrap">
+<p class="crumbs"><a href="projets.html">← Tous les projets</a></p>
+<h1>Réseau Active Directory de laboratoire</h1>
+<p class="lead">Déploiement, depuis zéro, d&#x27;un réseau Active Directory de laboratoire destiné aux examens des stagiaires TSSR, avec une exigence de reprise par l&#x27;équipe après mon départ.</p>
+<dl class="facts"><div><dt>Cadre</dt><dd>Stage de 350 h, AFPA Amiens (FRC)</dd></div><div><dt>Période</dt><dd>11/05/2026 – 24/07/2026</dd></div><div><dt>Durée du projet</dt><dd>Environ 3 semaines</dd></div><div><dt>Environnement</dt><dd>Hyper-V, Windows Server</dd></div></dl>
+
+<section><h2>Objectifs</h2><ul class="clean"><li>Fournir un domaine Active Directory prêt à l'emploi pour des épreuves d'évaluation.</li><li>Garantir que chaque utilisateur n'accède qu'aux ressources qui le concernent.</li><li>Documenter l'ensemble pour que l'équipe puisse le maintenir et le faire évoluer.</li></ul></section><section><h2>Réalisations</h2><ul class="clean"><li>Création de machines virtuelles sous Hyper-V et installation des rôles AD DS et DNS sur un contrôleur de domaine.</li><li>Création des utilisateurs, des groupes de sécurité et des unités d'organisation.</li><li>Structure de partages NTFS : un dossier commun, un dossier personnel par utilisateur et un dossier par service, en partages cachés avec droits limités au bon utilisateur ou groupe.</li><li>Stratégie de groupe de mappage des lecteurs réseau, avec ciblage par groupe de sécurité (lecteur commun, lecteur personnel, lecteur de service).</li><li>Ajout d'un second contrôleur de domaine pour la haute disponibilité, avec test de bascule : DNS et ouverture de session maintenus avec un seul contrôleur actif.</li><li>Mise en place de la supervision avec Zabbix.</li></ul></section><section><h2>Difficultés rencontrées</h2><ul class="clean"><li><strong>Permissions NTFS :</strong> seule l'autorisation « Écriture » était cochée, ce qui empêchait de modifier ou supprimer des fichiers. Correction en attribuant « Modification » sur les dossiers concernés.</li><li><strong>Mappage du lecteur personnel :</strong> le mappage ne remontait pas. Il a fallu ajouter une condition de ciblage au niveau de l'élément (utilisateur membre du groupe Utilisateurs du domaine).</li><li><strong>Renommage d'un contrôleur de domaine :</strong> réalisé sans procédure adaptée ni point de contrôle préalable, il a cassé la relation d'approbation. Je l'ai reconstruit entièrement. Depuis, je crée systématiquement un checkpoint avant toute opération sensible sur un contrôleur de domaine.</li><li><strong>Résolution DNS :</strong> un incident réel, la carte réseau du serveur pointait vers un DNS invalide. Diagnostic avec Get-Service, Test-NetConnection et l'observateur d'événements, puis correction par PowerShell.</li></ul></section><section><h2>Compétences mises en œuvre</h2><div class="tags"><span class="tag">Windows Server</span><span class="tag">Active Directory</span><span class="tag">DNS</span><span class="tag">GPO</span><span class="tag">NTFS</span><span class="tag">Hyper-V</span><span class="tag">PowerShell</span><span class="tag">Zabbix</span></div></section>
+<section></section>
+<div class="pager"><span></span><a href="projet-afpa-reseau.html">Sécurisation du réseau FRC →</a></div>
+</div>
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<span>© 2026 Noé Sinoquet</span>
+<span><a href="mailto:sinoquetnoe01@gmail.com">sinoquetnoe01@gmail.com</a> · <a href="tel:+33637860741">06 37 86 07 41</a></span>
+</div>
+</footer>
+</body>
+</html>
