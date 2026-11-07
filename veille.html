@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Veille informationnelle | Noé Sinoquet</title>
-<meta name="description" content="Veille en cybersécurité de Noé Sinoquet : sources suivies et objectifs.">
+<meta name="description" content="Veille en cybersécurité de Noé Sinoquet : sources suivies, méthode et articles retenus.">
 <meta name="color-scheme" content="light dark">
 <link rel="stylesheet" href="assets/style.css">
 </head>
@@ -39,10 +39,22 @@
 </ul>
 </section>
 <section>
+<h2>Méthode</h2>
+<p>Mes sources sont regroupées dans un lecteur RSS, organisé en trois dossiers : <em>Alertes</em> (CERT-FR, ANSSI), <em>Attaques</em> (The Hacker News, Dark Reading) et <em>Administration</em> (IT-Connect). Je lis les titres, j'ouvre les articles liés aux produits que j'administre, puis je retiens les plus importants.</p>
+</section>
+<section>
 <h2>Sources suivies</h2>
-<div class="table-wrap"><table><thead><tr><th>Type d'information</th><th>Source</th></tr></thead><tbody><tr><td>Alertes de vulnérabilités et failles de sécurité</td><td><a href="https://www.cert.ssi.gouv.fr/" rel="noopener" target="_blank">CERT-FR</a></td></tr><tr><td>Attaques en cours et tendances</td><td><a href="https://thehackernews.com/" rel="noopener" target="_blank">The Hacker News</a></td></tr><tr><td>Attaques en cours et tendances</td><td><a href="https://www.darkreading.com/" rel="noopener" target="_blank">Dark Reading</a></td></tr><tr><td>Réglementation et normes</td><td><a href="https://cyber.gouv.fr/" rel="noopener" target="_blank">ANSSI</a></td></tr><tr><td>Réglementation et normes</td><td><a href="https://www.cnil.fr/" rel="noopener" target="_blank">CNIL</a></td></tr><tr><td>Articles et tendances</td><td><a href="https://www.zdnet.fr/" rel="noopener" target="_blank">ZDNet, rubrique sécurité</a></td></tr></tbody></table></div>
+<div class="table-wrap"><table><thead><tr><th>Type d'information</th><th>Source</th></tr></thead><tbody><tr><td>Actualités officielles de l&#x27;ANSSI</td><td><a href="https://cyber.gouv.fr/" rel="noopener" target="_blank">cyber.gouv.fr (ANSSI)</a></td></tr><tr><td>Avis et alertes de sécurité par éditeur</td><td><a href="https://cert.cyber.gouv.fr/" rel="noopener" target="_blank">CERT-FR</a></td></tr><tr><td>Attaques en cours et tendances</td><td><a href="https://thehackernews.com/" rel="noopener" target="_blank">The Hacker News</a></td></tr><tr><td>Attaques en cours et tendances</td><td><a href="https://www.darkreading.com/" rel="noopener" target="_blank">Dark Reading</a></td></tr><tr><td>Administration Windows et sécurité (en français)</td><td><a href="https://www.it-connect.fr/" rel="noopener" target="_blank">IT-Connect</a></td></tr></tbody></table></div>
+</section>
+<section>
+<h2>Articles retenus</h2>
+<p class="muted" id="maj"></p>
+<div class="grid" id="articles"></div>
+<noscript><p class="note">Les articles s'affichent avec JavaScript. Activez-le pour les consulter.</p></noscript>
 </section>
 </div>
+<script src="assets/veille-articles.js"></script>
+<script src="assets/veille.js"></script>
 </main>
 <footer class="site-footer">
 <div class="wrap">
